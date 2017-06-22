@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DemoMoya" customModuleProvider="target">
+            <connections>
+                <outlet property="passwordTextfield" destination="ev7-1t-u1c" id="mvP-Fb-55D"/>
+                <outlet property="signInButton" destination="PhG-mh-F4i" id="Mnu-H8-RS3"/>
+                <outlet property="signInButtonBottomConstraint" destination="BbM-We-g69" id="HwC-Ty-g6G"/>
+                <outlet property="userNameTextfield" destination="lMe-Mj-Rbe" id="pFE-4j-kDh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="at-ios-mvvm" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lMe-Mj-Rbe">
+                    <rect key="frame" x="20" y="80" width="335" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="hn7-mZ-0iV"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="101a6476440c30431a1725c310d1abe049189b2a" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ev7-1t-u1c">
+                    <rect key="frame" x="20" y="120" width="335" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="hJy-G7-ljc"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhG-mh-F4i">
+                    <rect key="frame" x="0.0" y="667" width="375" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="q2U-7K-iGK"/>
+                    </constraints>
+                    <state key="normal" title="Sign In">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didSelectSignInButton:" destination="-1" eventType="touchUpInside" id="H52-ef-rym"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="PhG-mh-F4i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2Fj-Nj-Hga"/>
+                <constraint firstItem="ev7-1t-u1c" firstAttribute="top" secondItem="lMe-Mj-Rbe" secondAttribute="bottom" constant="10" id="6Is-5y-lua"/>
+                <constraint firstItem="lMe-Mj-Rbe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="8De-dV-tfj"/>
+                <constraint firstAttribute="bottom" secondItem="PhG-mh-F4i" secondAttribute="bottom" constant="-40" id="BbM-We-g69"/>
+                <constraint firstAttribute="trailing" secondItem="PhG-mh-F4i" secondAttribute="trailing" id="DGa-eC-uN7"/>
+                <constraint firstAttribute="trailing" secondItem="lMe-Mj-Rbe" secondAttribute="trailing" constant="20" id="bH9-EU-z2A"/>
+                <constraint firstItem="lMe-Mj-Rbe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="jk5-gV-H9r"/>
+                <constraint firstItem="ev7-1t-u1c" firstAttribute="width" secondItem="lMe-Mj-Rbe" secondAttribute="width" id="qQe-3k-3jn"/>
+                <constraint firstItem="ev7-1t-u1c" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zKF-Rb-xYw"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
