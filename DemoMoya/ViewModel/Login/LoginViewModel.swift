@@ -32,7 +32,6 @@ final class LoginViewModel {
             } catch {
                 let errorMessage = (error as CustomStringConvertible).description
                 print(errorMessage)
-//                self.showAlert("GitHub Fetch", message: errorMessage)
             }
         }
     }
