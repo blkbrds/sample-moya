@@ -24,9 +24,11 @@ final class LoginViewController: UIViewController {
 
     // MARK: - Function
     private func registerNotification() {
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(handleKeyboardDidChangeFrame),
-                                               name: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleKeyboardDidChangeFrame),
+            name: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil
+        )
     }
 
     private func setupView() {
@@ -41,7 +43,7 @@ final class LoginViewController: UIViewController {
         signInButtonBottomConstraint.constant = keyboardFrame.size.height
     }
 
-    fileprivate func showAlert(_ title: String, message: String) {
+    fileprivate func showAlert(title: String, message: String?) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(ok)
@@ -49,10 +51,15 @@ final class LoginViewController: UIViewController {
     }
 
     @IBAction private func didSelectSignInButton(_ sender: UIButton) {
-        viewModel.username = userNameTextfield.text!
-        viewModel.password = passwordTextfield.text!
-        viewModel.login { result in
-            print(result)
+        viewModel.username = userNameTextfield.text.content
+        viewModel.password = passwordTextfield.text.content
+        viewModel.login { [weak self] result in
+            guard let this = self else { return }
+            switch result {
+            case .success: break
+            case .failure(let message):
+                this.showAlert(title: "Error", message: message)
+            }
         }
     }
 }
