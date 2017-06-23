@@ -14,6 +14,8 @@
 		82A13F031EFB594B00050B94 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A13F021EFB594B00050B94 /* API.swift */; };
 		82A13F051EFB5A8000050B94 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A13F041EFB5A8000050B94 /* Data.swift */; };
 		82A13F081EFB679A00050B94 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A13F071EFB679A00050B94 /* GitHubAPI.swift */; };
+		82A13F0A1EFB68E300050B94 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A13F091EFB68E300050B94 /* Optional.swift */; };
+		82A13F0C1EFB83BD00050B94 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A13F0B1EFB83BD00050B94 /* Network.swift */; };
 		82CFFA151EFA53F3000002A1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CFFA131EFA53F3000002A1 /* LoginViewController.swift */; };
 		82CFFA161EFA53F3000002A1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82CFFA141EFA53F3000002A1 /* LoginViewController.xib */; };
 		82CFFA191EFA543E000002A1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CFFA181EFA543E000002A1 /* LoginViewModel.swift */; };
@@ -30,6 +32,8 @@
 		82A13F021EFB594B00050B94 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		82A13F041EFB5A8000050B94 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		82A13F071EFB679A00050B94 /* GitHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		82A13F091EFB68E300050B94 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		82A13F0B1EFB83BD00050B94 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		82CFFA131EFA53F3000002A1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82CFFA141EFA53F3000002A1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		82CFFA181EFA543E000002A1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 			children = (
 				82A13EFE1EFB583500050B94 /* String.swift */,
 				82A13F041EFB5A8000050B94 /* Data.swift */,
+				82A13F091EFB68E300050B94 /* Optional.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 		82A13F061EFB679A00050B94 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				82A13F0B1EFB83BD00050B94 /* Network.swift */,
 				82A13F071EFB679A00050B94 /* GitHubAPI.swift */,
 			);
 			path = API;
@@ -320,8 +326,10 @@
 				8223A9311EFA4D4000143B0A /* AppDelegate.swift in Sources */,
 				82A13F011EFB583500050B94 /* String.swift in Sources */,
 				82CFFA191EFA543E000002A1 /* LoginViewModel.swift in Sources */,
+				82A13F0C1EFB83BD00050B94 /* Network.swift in Sources */,
 				82A13F081EFB679A00050B94 /* GitHubAPI.swift in Sources */,
 				82A13F031EFB594B00050B94 /* API.swift in Sources */,
+				82A13F0A1EFB68E300050B94 /* Optional.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
