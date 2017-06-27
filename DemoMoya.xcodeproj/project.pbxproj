@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		821E53E61F023F9200354F29 /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821E53E41F023F9200354F29 /* RepoListViewController.swift */; };
+		821E53E71F023F9200354F29 /* RepoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 821E53E51F023F9200354F29 /* RepoListViewController.xib */; };
+		821E53EA1F023FCD00354F29 /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821E53E91F023FCD00354F29 /* RepoListViewModel.swift */; };
+		821E53EC1F0240CB00354F29 /* RepoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821E53EB1F0240CB00354F29 /* RepoCellViewModel.swift */; };
+		821E53EE1F0240F100354F29 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821E53ED1F0240F100354F29 /* Repo.swift */; };
+		821E53F21F02475200354F29 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821E53F01F02475200354F29 /* RepoCell.swift */; };
+		821E53F31F02475200354F29 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 821E53F11F02475200354F29 /* RepoCell.xib */; };
 		8223A9311EFA4D4000143B0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223A9301EFA4D4000143B0A /* AppDelegate.swift */; };
 		8223A9381EFA4D4000143B0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8223A9371EFA4D4000143B0A /* Assets.xcassets */; };
 		8223A93B1EFA4D4000143B0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8223A9391EFA4D4000143B0A /* LaunchScreen.storyboard */; };
+		8287E47E1EFD180900B635F5 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8287E47D1EFD180900B635F5 /* UIViewController.swift */; };
+		8287E4811EFD219400B635F5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8287E4801EFD219400B635F5 /* User.swift */; };
 		82A13F011EFB583500050B94 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A13EFE1EFB583500050B94 /* String.swift */; };
 		82A13F031EFB594B00050B94 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A13F021EFB594B00050B94 /* API.swift */; };
 		82A13F051EFB5A8000050B94 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A13F041EFB5A8000050B94 /* Data.swift */; };
@@ -23,11 +32,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		821E53E41F023F9200354F29 /* RepoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
+		821E53E51F023F9200354F29 /* RepoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoListViewController.xib; sourceTree = "<group>"; };
+		821E53E91F023FCD00354F29 /* RepoListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
+		821E53EB1F0240CB00354F29 /* RepoCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCellViewModel.swift; sourceTree = "<group>"; };
+		821E53ED1F0240F100354F29 /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		821E53F01F02475200354F29 /* RepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		821E53F11F02475200354F29 /* RepoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
 		8223A92D1EFA4D3F00143B0A /* DemoMoya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoMoya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8223A9301EFA4D4000143B0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8223A9371EFA4D4000143B0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8223A93A1EFA4D4000143B0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8223A93C1EFA4D4000143B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8287E47D1EFD180900B635F5 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		8287E4801EFD219400B635F5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		82A13EFE1EFB583500050B94 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		82A13F021EFB594B00050B94 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		82A13F041EFB5A8000050B94 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -60,6 +78,33 @@
 				A08B9418817927A3CA6E09F7 /* Pods_DemoMoya.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		821E53E31F023F7B00354F29 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				821E53E41F023F9200354F29 /* RepoListViewController.swift */,
+				821E53E51F023F9200354F29 /* RepoListViewController.xib */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		821E53E81F023FAC00354F29 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				821E53E91F023FCD00354F29 /* RepoListViewModel.swift */,
+				821E53EB1F0240CB00354F29 /* RepoCellViewModel.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		821E53EF1F02473F00354F29 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				821E53F01F02475200354F29 /* RepoCell.swift */,
+				821E53F11F02475200354F29 /* RepoCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		8223A9241EFA4D3F00143B0A = {
@@ -97,6 +142,8 @@
 		8279E0011EFA4FC700E2DAD5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				821E53EF1F02473F00354F29 /* Cell */,
+				821E53E31F023F7B00354F29 /* Repo */,
 				82CFFA121EFA53C8000002A1 /* Login */,
 				8223A9301EFA4D4000143B0A /* AppDelegate.swift */,
 				8223A9391EFA4D4000143B0A /* LaunchScreen.storyboard */,
@@ -107,6 +154,7 @@
 		8279E0021EFA4FD300E2DAD5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8287E47F1EFD213800B635F5 /* Schema */,
 				82A13F061EFB679A00050B94 /* API */,
 			);
 			path = Model;
@@ -115,6 +163,7 @@
 		8279E0031EFA4FE700E2DAD5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				821E53E81F023FAC00354F29 /* Repo */,
 				82CFFA171EFA5427000002A1 /* Login */,
 			);
 			path = ViewModel;
@@ -144,12 +193,22 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		8287E47F1EFD213800B635F5 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				8287E4801EFD219400B635F5 /* User.swift */,
+				821E53ED1F0240F100354F29 /* Repo.swift */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
 		82A13EFF1EFB583500050B94 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				82A13EFE1EFB583500050B94 /* String.swift */,
 				82A13F041EFB5A8000050B94 /* Data.swift */,
 				82A13F091EFB68E300050B94 /* Optional.swift */,
+				8287E47D1EFD180900B635F5 /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -260,6 +319,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821E53E71F023F9200354F29 /* RepoListViewController.xib in Resources */,
+				821E53F31F02475200354F29 /* RepoCell.xib in Resources */,
 				8223A93B1EFA4D4000143B0A /* LaunchScreen.storyboard in Resources */,
 				8223A9381EFA4D4000143B0A /* Assets.xcassets in Resources */,
 				82CFFA161EFA53F3000002A1 /* LoginViewController.xib in Resources */,
@@ -311,7 +372,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -324,12 +385,19 @@
 				82A13F051EFB5A8000050B94 /* Data.swift in Sources */,
 				82CFFA151EFA53F3000002A1 /* LoginViewController.swift in Sources */,
 				8223A9311EFA4D4000143B0A /* AppDelegate.swift in Sources */,
+				821E53EA1F023FCD00354F29 /* RepoListViewModel.swift in Sources */,
 				82A13F011EFB583500050B94 /* String.swift in Sources */,
+				821E53E61F023F9200354F29 /* RepoListViewController.swift in Sources */,
+				8287E47E1EFD180900B635F5 /* UIViewController.swift in Sources */,
 				82CFFA191EFA543E000002A1 /* LoginViewModel.swift in Sources */,
 				82A13F0C1EFB83BD00050B94 /* Network.swift in Sources */,
 				82A13F081EFB679A00050B94 /* GitHubAPI.swift in Sources */,
+				821E53EC1F0240CB00354F29 /* RepoCellViewModel.swift in Sources */,
 				82A13F031EFB594B00050B94 /* API.swift in Sources */,
+				821E53EE1F0240F100354F29 /* Repo.swift in Sources */,
 				82A13F0A1EFB68E300050B94 /* Optional.swift in Sources */,
+				8287E4811EFD219400B635F5 /* User.swift in Sources */,
+				821E53F21F02475200354F29 /* RepoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +527,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QM237XU2M3;
 				INFOPLIST_FILE = "$(SRCROOT)/DemoMoya/Supports/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vn.demo.moya.DemoMoya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -473,6 +542,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QM237XU2M3;
 				INFOPLIST_FILE = "$(SRCROOT)/DemoMoya/Supports/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vn.demo.moya.DemoMoya;
 				PRODUCT_NAME = "$(TARGET_NAME)";

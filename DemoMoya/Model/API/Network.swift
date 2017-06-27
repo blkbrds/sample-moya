@@ -16,9 +16,9 @@ let GitHubProvider = MoyaProvider<GitHub>(
     ]
 )
 
-let githubCredential = GitHubCredential()
+let credential = Credential()
 
-final class GitHubCredential {
+final class Credential {
     var username = ""
     var token = ""
 }
@@ -26,7 +26,7 @@ final class GitHubCredential {
 struct GitHubCredentialPlugin: PluginType {
 
     var auth: String {
-        return "Basic " + "\(githubCredential.username):\(githubCredential.token)".base64(.encode)
+        return "Basic " + "\(credential.username):\(credential.token)".base64(.encode)
     }
 
     func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
