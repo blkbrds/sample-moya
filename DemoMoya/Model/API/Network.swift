@@ -10,7 +10,7 @@ import Foundation
 import Moya
 import Result
 
-let GitHubProvider = MoyaProvider<GitHub>(
+let GitHubProvider = MoyaProvider<MultiTarget>(
     plugins: [
         NetworkLoggerPlugin(verbose: true), /// Logs network activity (outgoing requests and incoming responses).
         GitHubCredentialPlugin(),
@@ -77,5 +77,25 @@ struct CustomPlugin: PluginType {
         case .failure(let error):
             return Result.failure(error)
         }
+    }
+}
+
+extension MoyaProvider {
+    @discardableResult
+    func requestDecoded(_ target: Target, completion: @escaping (_ result: Result<Any, MoyaError>) -> Void) -> Cancellable {
+        let req = request(target) { result in
+            switch result {
+            case .success(let response):
+                do {
+                    let parsed = try response.mapJSON()
+                    completion(.success(parsed))
+                } catch {
+                    completion(.failure(.jsonMapping(response)))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+        return req
     }
 }

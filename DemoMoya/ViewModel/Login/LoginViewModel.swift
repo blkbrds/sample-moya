@@ -63,7 +63,8 @@ final class LoginViewModel {
         }
         credential.username = username
         credential.token = accessToken
-        GitHubProvider.request(GitHub.login) { result in
+        let target = MultiTarget(GitHub.login)
+        GitHubProvider.request(target) { result in
             switch result {
             case .success(_):
                 completion(.success)
