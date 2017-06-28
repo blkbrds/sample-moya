@@ -43,23 +43,12 @@ final class RepoListViewModel: ViewModel {
             switch result {
             case .success(let response):
                 do {
-                    _ = try response.filterSuccessfulStatusCodes()
-                    let jsonObject = try response.mapJSON()
-                    if let repos = Mapper<Repo>().mapArray(JSONObject: jsonObject) {
+                    let jsonObj = try response.mapJSON()
+                    if let repos = Mapper<Repo>().mapArray(JSONObject: jsonObj) {
                         self.repos = repos
                     }
                     completion(.success)
-                } catch {
-                    var errorMessage = (error as CustomStringConvertible).description
-                    if let json = result.value?.data.toJSON() as? [String: Any], let message = json["message"] as? String {
-                        errorMessage = message
-                    }
-                    let info: [String: Any] = [
-                        NSLocalizedDescriptionKey: errorMessage
-                    ]
-                    let error = NSError(domain: "", code: -1, userInfo: info)
-                    completion(.failure(error))
-                }
+                } catch { fatalError("Can't mapJSON") }
             case .failure(let error):
                 completion(.failure(error as NSError))
             }

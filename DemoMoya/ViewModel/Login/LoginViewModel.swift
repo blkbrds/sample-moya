@@ -43,11 +43,6 @@ final class LoginViewModel {
     var username = ""
     var accessToken = ""
 
-//    init(user: User?) {
-//        guard let user = user else { return }
-//        username = user.username
-//    }
-
     func validate() -> Validation {
         guard username.len >= 4 else {
             return .failure(field: .username, msg: "'\(Field.username)' too short")
@@ -70,21 +65,8 @@ final class LoginViewModel {
         credential.token = accessToken
         GitHubProvider.request(GitHub.login) { result in
             switch result {
-            case .success(let response):
-                do {
-                    _ = try response.filterSuccessfulStatusCodes()
-                    completion(.success)
-                } catch {
-                    var errorMessage = (error as CustomStringConvertible).description
-                    if let json = result.value?.data.toJSON() as? [String: Any], let message = json["message"] as? String {
-                        errorMessage = message
-                    }
-                    let info: [String: Any] = [
-                        NSLocalizedDescriptionKey: errorMessage
-                    ]
-                    let error = NSError(domain: "", code: -1, userInfo: info)
-                    completion(.failure(error))
-                }
+            case .success(_):
+                completion(.success)
             case .failure(let error):
                 completion(.failure(error as NSError))
             }
