@@ -9,6 +9,7 @@
 import Foundation
 import MVVM
 import ObjectMapper
+import Moya
 
 final class RepoListViewModel: ViewModel {
     weak var delegate: ViewModelDelegate?
@@ -32,23 +33,20 @@ final class RepoListViewModel: ViewModel {
 
     enum GetReposResult {
         case success
-        case failure(Error)
+        case failure(NSError)
     }
 
-    typealias GetReposCompletion = (GetReposResult) -> Void
+    typealias GetReposCompletion = (RepoListViewModel.GetReposResult) -> Void
 
     func getRepos(completion: @escaping GetReposCompletion) {
-        let target = GitHub.repoList(type: .all, sort: .fullName, direction: .desc)
-        GitHubProvider.request(target) { result in
+        let target = MultiTarget(GitHub.repoList(type: .all, sort: .fullName, direction: .desc))
+        GitHubProvider.requestDecoded(target) { result in
             switch result {
-            case .success(let response):
-                do {
-                    let jsonObj = try response.mapJSON()
-                    if let repos = Mapper<Repo>().mapArray(JSONObject: jsonObj) {
-                        self.repos = repos
-                    }
-                    completion(.success)
-                } catch { fatalError("Can't mapJSON") }
+            case .success(let jsonObject):
+                if let repos = Mapper<Repo>().mapArray(JSONObject: jsonObject) {
+                    self.repos = repos
+                }
+                completion(.success)
             case .failure(let error):
                 completion(.failure(error as NSError))
             }
